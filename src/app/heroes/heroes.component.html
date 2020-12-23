@@ -8,8 +8,8 @@
     </div>
 </div>
 <h2>My Heroes</h2>
-<ul>
-    <li *ngFor="let hero of heroes" (click)="onClickHero(hero)">
-        <span>{{hero.id}}. </span> {{hero.name}} <br>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onClickHero(hero)" [class.selected]="hero === selectedHero">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
 </ul>
